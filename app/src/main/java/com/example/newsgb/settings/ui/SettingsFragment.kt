@@ -17,6 +17,7 @@ class SettingsFragment : Fragment() {
 
     private var _binding: SettingsFragmentBinding? = null
     private val binding get() = _binding!!
+
     private lateinit var prefs: SharedPreferences
     private val APP_PREFERENCES_COUNTRY = "country"
     private var countrySettings: String = ""
@@ -25,7 +26,7 @@ class SettingsFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        prefs = this.activity?.getSharedPreferences("Settings", Context.MODE_PRIVATE)!!
+        prefs = requireActivity().getSharedPreferences("Settings", Context.MODE_PRIVATE)
     }
 
     override fun onCreateView(
@@ -38,13 +39,13 @@ class SettingsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        initViews()
+        initView()
     }
 
-    private fun initViews() {
+    private fun initView() {
         val items = listOf("Russia", "Deutch", "England")
         val adapter = ArrayAdapter(requireContext(), R.layout.country_list_item, items)
-        (binding.selectCountryMode.editText as? AutoCompleteTextView)?.setAdapter(adapter)
+        (binding.selectCountryLayout.editText as? AutoCompleteTextView)?.setAdapter(adapter)
     }
 
     override fun onPause() {

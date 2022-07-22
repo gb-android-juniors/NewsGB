@@ -31,4 +31,8 @@
     <string name="more_details">Mehr Details…</string>
     <string name="unknown_error">Unbekannter Fehler!</string>
 
+    <!--    Settings Fragment-->
+    <string name="geolocation">Geolokalisierung</string>
+    <string name="select_country">Wähle ein Land</string>
+
 </resources>

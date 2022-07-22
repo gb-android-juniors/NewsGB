@@ -38,4 +38,8 @@
     <string name="more_details">More details…</string>
     <string name="unknown_error">Unknown Error!</string>
 
+    <!--    Settings Fragment-->
+    <string name="geolocation">Geolocation</string>
+    <string name="select_country">Select country</string>
+
 </resources>

@@ -31,4 +31,8 @@
     <string name="more_details">Подробнее…</string>
     <string name="unknown_error">Неизвестная ошибка!</string>
 
+    <!--    Settings Fragment-->
+    <string name="geolocation">Геолокация</string>
+    <string name="select_country">Выберите страну</string>
+
 </resources>
